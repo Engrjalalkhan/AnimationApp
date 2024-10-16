@@ -26,6 +26,12 @@ const AnimatedImagesScreen = () => {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnfh_cPq68QR-S_GpziU6M1zb-OA2P6DrZPtbnw2lI4swUAJRaPZHrS_7aJxy_J2RpaY&usqp=CAU',
     'https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-green-field-scenery-free-image.jpg?w=600&quality=80',
     'https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/woman-standing-in-a-vineyard-and-looking-over-the-vineyard-scenery-free-image.jpg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/text-nature-metal-letters-on-a-rock-in-green-forest-free-photo.jpg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/relaxing-mood-hot-drink-coffee-with-a-view-into-fall-garden-free-image.jpeg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/waterfalls-in-the-middle-of-a-misty-forest-free-image.jpeg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-autumn-forest-free-image.jpeg?w=600&quality=80',
+    'https://i0.wp.com/picjumbo.com/wp-content/uploads/les-kralovstvi-dam-czech-republic-free-image.jpg?w=600&quality=80',
   ];
 
   // Initialize fade, slide, and rotate animations for each image
@@ -48,13 +54,13 @@ const AnimatedImagesScreen = () => {
   const handleSlide = index => {
     Animated.timing(slideAnim[index], {
       toValue: 1, // Slide the image up
-      duration: 500,
+      duration: 1000,
       useNativeDriver: true,
     }).start(() => {
       // Reset to initial position after animation ends
       Animated.timing(slideAnim[index], {
         toValue: 0,
-        duration: 500,
+        duration: 1000,
         useNativeDriver: true,
       }).start();
     });
@@ -64,7 +70,7 @@ const AnimatedImagesScreen = () => {
   const handleRotate = index => {
     Animated.timing(rotateAnim[index], {
       toValue: 1, // Rotate to 360 degrees
-      duration: 500,
+      duration: 1500,
       useNativeDriver: true,
     }).start(() => {
       rotateAnim[index].setValue(0); // Reset rotation after completing
